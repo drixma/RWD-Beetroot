@@ -1,0 +1,941 @@
+@use 'fonts.scss';
+
+$blue: #5474fd;
+$black: #000;
+$white: #fff;
+$gray: #999999;
+$silver: #e8e8e8;
+
+%button {
+  outline: none;
+  width: 22.8rem;
+  height: 6.3rem;
+  background-color: $blue;
+  color: $white;
+  font-family: 'Aleo';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: lightblue;
+    cursor: pointer;
+  }
+}
+
+button {
+  @extend %button;
+}
+
+:root {
+  outline: none;
+  font-size: 10px;
+  font-family: fonts.$font-josefin;
+}
+body {
+  border: 1.5rem solid $white;
+}
+
+.centered-wrapper {
+  max-width: 1200px;
+  padding: 0 45px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 2.6rem;
+  color: $white;
+}
+h5 {
+  font-family: fonts.$font-josefin;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: $white;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: $white;
+  font-family: fonts.$font-josefin;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: $white;
+}
+
+//header//
+
+.site-header {
+  background-image: url('../img/header-mountain-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  &__text {
+    color: $white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding-top: 26rem;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 2.6rem;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 4.8rem;
+    letter-spacing: 0.68rem;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11rem;
+    max-width: 1200px;
+
+    input {
+      outline: none;
+      height: 6rem;
+      width: 50rem;
+      align-items: center;
+      color: #000;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.6rem;
+      letter-spacing: 0.3rem;
+      border: none;
+      text-align: center;
+
+      &::placeholder {
+        padding-left: 11rem;
+        padding-right: 11rem;
+      }
+    }
+    button {
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $white;
+      cursor: pointer;
+      max-width: 15rem;
+      height: 6.2rem;
+      left: 45.3rem;
+
+      span {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.14rem;
+        text-transform: uppercase;
+        margin: 1.9rem 3.7rem 1.5rem 2.1;
+      }
+
+      img {
+        margin-left: 1.1rem;
+        width: 22px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__scroll-down {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    text-decoration: none;
+    color: $white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 13.7rem;
+  }
+}
+
+//menu
+
+.site-menu {
+  background-color: $blue;
+  height: 8rem;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 3.1rem;
+  }
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+
+    a {
+      height: 100%;
+      color: $white;
+      font-family: fonts.$font-aleo;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding-right: 2.9rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+//why us section //
+
+.site-marketing {
+  position: relative;
+  background: url(../img/beach-bg.jpg) rgba(35, 35, 35, 0.85);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16rem;
+  }
+  &__text {
+    width: 56rem;
+    margin-top: 12.2rem;
+
+    h3 {
+      margin-top: 8rem;
+      margin-bottom: 5rem;
+    }
+    p {
+      max-width: 56rem;
+      line-height: 1.6rem;
+      &:nth-child(2) {
+        content: '';
+        margin-bottom: 3rem;
+      }
+    }
+    button {
+      max-width: 228px;
+      width: 100%;
+      margin-top: 45px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--lake {
+    margin: 12.2rem 4.5rem 1rem 0;
+    width: 350px;
+    height: 220px;
+  }
+  &--mountain {
+    margin-bottom: 11rem;
+    transform: translateX(90px);
+    width: 350px;
+    height: 220px;
+  }
+}
+
+//guide section//
+
+.site-guide {
+  background-color: #333333;
+  height: 33rem;
+
+  &__content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16rem;
+    padding: 0 10rem;
+    border-bottom: 8px solid $gray;
+  }
+  &__article {
+    width: 23rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+
+    img {
+      position: relative;
+      padding: 18px 1px 13px;
+      position: relative;
+      background-color: #333333;
+      width: 6rem;
+      height: 6rem;
+      align-items: center;
+    }
+
+    p {
+      width: 100%;
+      font-size: 3.6rem;
+      line-height: 2.6rem;
+      justify-content: flex-start;
+      margin-top: 3.5rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+}
+
+//country section//
+
+.site-country {
+  background-image: url(../img/spain-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  &__bg {
+    width: 54rem;
+    height: 37rem;
+    margin-top: 23rem;
+    margin-bottom: 10rem;
+    background-color: rgba(35, 35, 35, 0.9);
+  }
+  &__text {
+    padding: 4.8rem 0.2rem 4.8rem 3rem;
+    h6 {
+      padding-bottom: 2.3rem;
+    }
+    h5 {
+      padding-bottom: 1.3rem;
+      text-transform: uppercase;
+    }
+    p {
+      padding-bottom: 4.3rem;
+    }
+  }
+}
+.site-country-right {
+  background-image: url(../img/spain-bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__bg {
+    width: 54rem;
+    height: 37rem;
+    margin-top: 23rem;
+    margin-bottom: 10rem;
+    background-color: rgba(35, 35, 35, 0.9);
+  }
+  &__text {
+    padding: 4.8rem 0.2rem 4.8rem 3rem;
+    h6 {
+      padding-bottom: 2.3rem;
+    }
+    h5 {
+      padding-bottom: 1.3rem;
+      text-transform: uppercase;
+    }
+    p {
+      padding-bottom: 4.3rem;
+    }
+  }
+}
+
+//rewievs section //
+
+.tourist-feedback {
+  background-image: url(../img/feedback-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid $white;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      margin: 12.8rem 0 9rem 0;
+    }
+  }
+  &__article {
+    position: relative;
+    width: 100%;
+    background-color: #333333;
+    min-height: 284px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 8.2rem 0;
+  }
+  &__article-text {
+    padding: 5rem 2.5rem 3.9rem 6.2rem;
+  }
+  &__img {
+    width: 100%;
+    height: 284px;
+  }
+
+  h5 {
+    color: $white;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+  &__quote {
+    text-align: justify;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    letter-spacing: -1.1px;
+  }
+  .icon-quote {
+    position: relative;
+    width: 3rem;
+    height: 2rem;
+    display: inline-block;
+    margin: 0 0 1.4rem 0;
+    &::before {
+      position: absolute;
+      top: -2.9rem;
+    }
+  }
+}
+
+//footer //
+
+.footer {
+  height: 27rem;
+  background-color: #232323;
+  &__content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 20rem;
+    padding-top: 12.5rem;
+    padding-bottom: 5rem;
+  }
+  img {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: fonts.$font-josefin;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+    margin: 0 0 2.9rem 0;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  li {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+    &:hover {
+      transform: scale(1.5);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//======================= tablet responsive ====================================//
+
+@media (min-width: 360px) and (max-width: 1015px) {
+  .site-header {
+    &__scroll-down {
+      display: none;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      margin-bottom: 0;
+    }
+    input {
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .site-menu {
+    width: 100%;
+    display: flex;
+    height: 27rem;
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 3.1rem;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 3.1rem;
+    }
+
+    &__navbar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      a {
+        display: block;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  //why us tablet//
+
+  .site-marketing {
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+
+    &__content {
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+    }
+    &__text {
+      width: 100%;
+      align-content: center;
+      text-align: center;
+
+      h3 {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 3.5rem 0;
+      }
+      p {
+        width: 100%;
+        margin: 0 auto;
+        text-align-last: center;
+      }
+      button {
+        margin-top: 4rem;
+      }
+    }
+    &--lake {
+      width: 100%;
+      width: 350px;
+    }
+    &--mountain {
+      transform: unset;
+      margin-bottom: 10rem;
+    }
+  }
+
+  //guide icons//
+
+  .site-guide {
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
+
+    &__content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 5rem;
+      border-bottom: none;
+      padding: 1rem 1 rem;
+    }
+    &__article {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  //country tablets//
+
+  .site-country {
+    height: 100%;
+    width: 100%;
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &__bg {
+        padding: 50px 30px;
+        text-align: center;
+      }
+      &__text {
+        height: auto;
+        margin: 5rem 0 0 0;
+        padding: 5rem 3rem;
+        text-align: center;
+      }
+    }
+  }
+  button {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
+  //site country right//
+  .site-country-right {
+    height: 100%;
+    width: 100%;
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &__bg {
+        padding: 50px 30px;
+        text-align: center;
+      }
+      &__text {
+        height: auto;
+        margin: 5rem 0 0 0;
+        padding: 5rem 3rem;
+        text-align: center;
+      }
+    }
+  }
+  button {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
+  //tourist tablet //
+
+  .tourist-feedback {
+    width: 100%;
+    height: 100%;
+    &__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &__article {
+      img {
+        width: initial;
+      }
+      position: relative;
+      width: 100%;
+      margin: 0 0 8rem 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+//======================= mobile responsive ====================================//
+
+// mobile responsive //
+
+@media (max-width: 480px) {
+  .site-header {
+    width: 100%;
+    &__text {
+      padding: 7rem 1rem 2rem;
+      justify-content: space-between;
+      text-align: center;
+      h2 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        &::placeholder {
+          width: 100%;
+          padding: 0 2rem 0 1rem;
+        }
+      }
+      button {
+        width: 100%;
+      }
+    }
+    &__scroll-down {
+      display: none;
+    }
+  }
+
+  //menu mobile//
+
+  .site-menu {
+    display: flex;
+    height: 100%;
+    padding-bottom: 2rem;
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 3rem;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    &__navbar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      a {
+        display: block;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  //section why us mobile//
+
+  .site-marketing {
+    width: 100%;
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    &__text {
+      h3 {
+        width: 100%;
+        margin: 0 auto;
+        margin: 0 0 3rem 0;
+      }
+      p {
+        margin: 0 auto;
+        max-width: 32rem;
+        text-align: center;
+        text-align-last: center;
+      }
+      button {
+        width: 100%;
+      }
+    }
+    img {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    &__lake {
+      width: 100%;
+    }
+    &--mountain {
+      margin-bottom: 11rem;
+      transform: unset;
+      width: 100%;
+    }
+  }
+
+  .site-how-to {
+    width: 100%;
+
+    &__content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 2rem;
+      border-bottom: none;
+      padding-top: 6rem;
+    }
+    &__article {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 2rem;
+
+      ::after {
+        display: none;
+      }
+      &:nth-child(3) ::before {
+        display: none;
+      }
+    }
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .site-country {
+    height: 100%;
+    width: 100%;
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &__bg {
+      width: 100%;
+      height: 100%;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+    &__text {
+      height: auto;
+      margin: 5rem 0 0 0;
+      padding: 5rem 3rem;
+      text-align: center;
+      h6 {
+        padding-top: unset;
+      }
+      p {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .site-country-right {
+    height: 100%;
+    width: 100%;
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &__bg {
+      width: 100%;
+      height: 100%;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+    &__text {
+      height: auto;
+      margin: 5rem 0 0 0;
+      padding: 5rem 3rem;
+      text-align: center;
+      h6 {
+        padding-top: unset;
+      }
+      p {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tourist-feedback {
+    width: 100%;
+    height: 100%;
+    &__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &__article {
+      position: relative;
+      width: 100%;
+      margin: 0 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
